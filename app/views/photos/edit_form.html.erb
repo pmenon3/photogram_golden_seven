@@ -1,0 +1,22 @@
+
+  <h1>
+    Edit your photo <%= @photo.id %>
+  </h1>
+
+  input[value='Old caption']
+
+  <form action="/update_photo/<%= @photo.id %>">
+    <label for="source_input">
+      Image URL
+    </label>
+    <input type ="text" id ="source_input" name="the_source" value = <%= @photo.source %>>
+
+    <label for="caption_input">
+      Caption
+    </label>
+    <input type ="text" id ="caption_input" name="the_caption" value = "Old Caption = <%= @photo.caption %>">
+    <button>
+      Update Photo
+    </button>
+
+  </form>
